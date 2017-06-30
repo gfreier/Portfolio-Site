@@ -3,24 +3,31 @@
 <head>
 	<title>Gretchen Freiermuth</title>
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 
 <body>
+	<!--///////////////////////////////////////////////////
+	//////////////////// Nav Bar /////////////////////////
+	////////////////////////////////////////////////////-->
+
 	<div class="topnav" id="myTopnav">
 		<a href="#home">Home</a>
 		<a href="#aboutMe">About Me</a>
 		<a href="#contact">Contact</a>
 	</div>
 
-	<img class="profilePicture" src="images/profilePicture.jpg">
-
 	<div class="homeText">
 		<p>Gretchen Freiermuth</p>
-		<p>Web Developer</p>
 	</div>
 
+
+	<!--///////////////////////////////////////////////////
+	//////////////////// About Me ////////////////////////
+	////////////////////////////////////////////////////-->
+
 	<div class="aboutMeSection">
-		<div class="sectionTitle">
+		<div class="aboutTitle">
 			<p>About Me</p>	
 		</div>
 		<div>
@@ -29,7 +36,43 @@
 		</div>
 	</div>
 
-	<h3>Contact</h3>
+
+
+	<!-- ///////////////////////////////////////////////////
+	//////////////////// Contact //////////////////////////
+	//////////////////////////////////////////////////// -->
+
+	<div class="clearfix contactSection">
+		<div class="contactTitle">
+			<p>Contact</p>
+		</div>
+		<div class="contactDetails">
+			<p>(612) 437-1470</p>
+			<p>gretchen.freiermuth@gmail.com</p>	
+		</div>
+
+		<div class="contactForm">
+			<div class="container">
+				<form action="/action_page.php">
+
+					<label for="fname">First Name</label>
+					<input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+					<label for="lname">Last Name</label>
+					<input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email" placeholder="Your Email..">
+
+					<label for="subject">Subject</label>
+					<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+					<input type="submit" value="Submit">
+
+				</form>
+			</div>
+		</div>
+	</div>
 
 </body>	
 </html>
