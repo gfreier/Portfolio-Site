@@ -3,7 +3,8 @@
 <head>
 	<title>Gretchen Freiermuth</title>
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 </head>
 
 <body>
@@ -13,12 +14,12 @@
 	////////////////////////////////////////////////////-->
 
 	<div class="topnav" id="myTopnav">
-		<a href="#home">Home</a>
-		<a href="#aboutMe">About Me</a>
-		<a href="#contact">Contact</a>
+		<a class="homeButton" href="#home">Home</a>
+		<a class="aboutButton" href="#aboutMe">About Me</a>
+		<a class="contactButton" href="#contact">Contact</a>
 	</div>
 
-	<div class="landing">
+	<div class="landing" id="home">
 		<p>Gretchen Freiermuth</p>
 	</div>
 
@@ -27,10 +28,10 @@
 	//////////////////// About Me ////////////////////////
 	////////////////////////////////////////////////////-->
 
-	<div class="aboutMeSection">
+	<div class="aboutMeSection" id="aboutMe">
 		<div>
 			<img class="gretchenFountain" src="images/gretchenFountain.jpg">
-			<p class="aboutMeDescription">Hello!  My name is Gretchen and I am a Minneapolis-based web developer.  I love to cook and travel.  I have a B.S. in Elementary Education and have been teaching preschool for the past three years!  I recently became interested in web development and have been learning to code.  Putting more words here so that the format of the page is good.  Just seeing how it looks.  My pug, Sven, is really really cute.  So is my husband.</p>
+			<p class="aboutMeDescription">Hello!  My name is Gretchen and I'm a Minneapolis-based web developer.  I love to cook, travel, and try new restaurants.  I have a B.S. in Elementary Education and have been teaching preschool for the past three years!  I recently became interested in web development and have been learning to code.  Putting more words here so that the format of the page is good.  Just seeing how it looks.  My pug, Sven, is really really cute.  So is my husband.</p>
 		</div>
 		<div class="social">
 			<a href="https://www.linkedin.com/" target="_blank">
@@ -44,7 +45,7 @@
 	//////////////////// Contact //////////////////////////
 	//////////////////////////////////////////////////// -->
 
-	<div class="clearfix contactSection">
+	<div class="clearfix contactSection" id="contact">
 		<div class="contactTitle">
 			<p>Let's Chat!</p>
 		</div>
@@ -58,14 +59,14 @@
 				<form action="/action_page.php">
 
 					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="Your name..">
+					<input type="text" id="name" name="name">
 
 
 					<label for="email">Email</label>
-					<input type="text" name="email" id="email" placeholder="Your Email..">
+					<input type="text" name="email" id="email">
 
 					<label for="message">Message</label>
-					<textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+					<textarea id="message" name="message" style="height:200px"></textarea>
 
 					<input type="submit" value="Submit">
 
@@ -78,3 +79,22 @@
 </html>
 
 
+<script type="text/javascript">
+	$(".homeButton").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top-600
+	    }, 700);
+	});
+
+	$(".aboutButton").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top-175
+	    }, 700);
+	}); 
+
+	$(".contactButton").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }, 700);
+	});   
+</script>
