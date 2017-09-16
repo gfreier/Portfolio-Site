@@ -88,15 +88,15 @@ body {
 /*////////////////////////////////////////*/
 /*/////////// About Me ///////////////////*/
 /*////////////////////////////////////////*/
-.gretchenFountain {
-	width: 30%;
+.gretchenCliff {
+	width: 45%;
 	height: auto;
-	border-radius: 50%;
+	border-radius: 1%;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5%;
-	border: 1px solid white;
+	border: 1px solid #820d05;
 }
 
 .aboutMeSection {
