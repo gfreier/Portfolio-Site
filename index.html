@@ -4,6 +4,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div class="site_wrapper";>
@@ -11,9 +12,9 @@
 			<div class="left_nav_wrapper">
 				<div class="left_content">
 					<ul>
-					  <li class="nav_item"><a href="#about">About</a></li>
-					  <li class="nav_item"><a href="#work">Work</a></li>
-					  <li class="nav_item"><a href="#contact">Contact</a></li>  
+					  <li class="nav_item to_about"><a href="#about">About</a></li>
+					  <li class="nav_item to_services"><a href="#services">Services</a></li>
+					  <li class="nav_item to_contact"><a href="#contact">Contact</a></li>  
 					</ul>
 				</div>
 			</div>
@@ -28,11 +29,62 @@
 					<h2>Web Developer</h2>
 
 					<div class="section_wrapper">
-						<div class="about section_spacer">Hello!  My name is Gretchen and I'm a Minneapolis-based web developer.  I love to cook, travel, and try new restaurants.  I have a B.S. in Elementary Education and have been teaching preschool for the past three years!  I recently became interested in web development and have been learning to code.  I am self taught through a combination of online Treehouse courses and pair programming with a senior web developer.
+						<div class="about section_spacer" id="about">Hello!  My name is Gretchen and I'm a Minneapolis-based web developer.  I love to cook, travel, and try new restaurants.  I have a B.S. in Elementary Education and have been teaching preschool for the past three years!  I recently became interested in web development and have been learning to code.  I am self taught through a combination of online Treehouse courses and pair programming with a senior web developer.
 						</div>
 
-						<div class="work section_spacer">Hello!  My name is Gretchen and I'm a Minneapolis-based web developer.  I love to cook, travel, and try new restaurants.  I have a B.S. in Elementary Education and have been teaching preschool for the past three years!  I recently became interested in web development and have been learning to code.  Putting more words here so that the format of the page is good.  Just seeing how it looks.  My pug, Sven, is really really cute.  So is my husband.
+						<div class="services section_spacer" id="services">Here lie all the amazing services I have to offer over yonder. SPACE....
 						</div>
+					
+
+
+						<section id="services" class="services"><!-- services -->
+							<div class="container">
+								<div class="row">
+									<h2 class="subtitle">services</h2>
+
+									<div class="col-md-12">
+										<div class="service-in">
+											<section>
+												<div class="sericon-holder">
+													<i class="fa fa-linux" aria-hidden="true"></i>
+												</div>
+												<h4>linux server admin</h4>
+
+												<p>I spin up a new server from fresh and get it ready for your website. I'll install all of the necessary applications needed to get everything working, create an FTP user for you, and more upon request.</p>
+											</section>
+											<section>
+												<div class="sericon-holder">
+													<i class="fa fa-html5" aria-hidden="true"></i>
+												</div>
+												<h4>front end development</h4>
+
+												<p>I can help make your website look up to date with current design and development practices. Responsive design will make it work for all sizes of screen!</p>
+											</section>
+											<section>
+												<div class="sericon-holder">
+													<i class="fa fa-code" aria-hidden="true"></i>
+												</div>
+												<h4>backend development</h4>
+
+												<p>Back end web development is my specialty! I can create databases to connect to, call from external API's, or even make web tools that do stuff for you.</p>
+											</section>
+											<section>
+												<div class="sericon-holder">
+													<i class="fa fa-wordpress" aria-hidden="true"></i>
+												</div>
+												<h4>wordpress development</h4>
+
+												<p>If you want a Wordpress site, I can set it up for you the proper way, with child themes, so that you won't accidently delete your website when you update. My role at a previous web hosting job was Wordpress Maintenance.</p>
+											</section>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+
+					
+
+
 					</div>
 
 					<div class="icons">
@@ -53,7 +105,7 @@
 				 		<p>Minneapolis, MN</p>		
 				 	</div>
 
-				    <div class="contact_form">
+				    <div class="contact_form" id="contact">
 						<div class="contactTitle">
 							<p>Let's Chat!</p>
 						</div>
@@ -94,3 +146,25 @@
 		</div> <!-- closes site_wrapper -->
 	</body>
 </html>
+
+
+
+<script type="text/javascript">
+	$(".to_about").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') )/*.offset().top*//*-600*/
+	    });
+	});
+
+	$(".to_services").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') )/*.offset().top-175*/
+	    }/*, 700*/);
+	}); 
+
+	$(".to_contact").on('click', function(event){	    
+		 $('html, body').animate({
+	        scrollTop: $( $.attr(this, 'href') ).offset().top
+	    }/*, 700*/);
+	});   
+</script>
